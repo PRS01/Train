@@ -1,0 +1,11 @@
+body {
+  background: url(train_station.jpg);
+}
+
+.container {
+  background-color: rgba(248, 248, 247, 0.63);
+}
+
+#teal {
+  background-color: rgba(95, 231, 231, 0.699);
+}
