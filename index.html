@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div
+        class="jumbotron text-center"
+        style="background-color: none; color: none"
+      >
+        <h1>Trains A Comin'</h1>
+        <hr />
+        <h2>Current Time: <span id="currentTime"></span></h2>
+      </div>
+      <!-- Jumbotron End -->
+
+      <div class="row">
+        <!--start row div-->
+        <div class="col-md-9">
+          <!--start column div-->
+          <div class="panel panel-primary">
+            <!--start panel panel div-->
+            <div class="panel-heading">
+              <!--start panel head div-->
+              <h3 class="panel-title">Train Schedule</h3>
+            </div>
+            <!--div panel head end-->
+            <div class="panel-body">
+              <!--start panel body div-->
+              <table
+                class="table table-hover table-responsive"
+                id="trainTable"
+                
+                <thead>
+                  <tr>
+                    <th>Train Name</th>
+                    <th>Destination</th>
+                    <th>Frequency (min)</th>
+                    <th>Next Arrival</th>
+                    <th>Minutes Away</th>
+                  </tr>
+                </thead>
+                <tbody id="trainTable">
+                  <tr></tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- div end -->
+          </div>
+          <!-- div end -->
+        </div>
+        <!-- div end -->
+        <!--lost a div end but no errors so confused-->
+        <div class="col-md-3">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">New Train</h3>
+            </div>
+            <div class="panel-body">
+              <form>
+                <div class="form-group">
+                  <label for="name">Train Name </label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    placeholder="Train To"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="dest">Destination </label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="destination"
+                    placeholder="Montana"
+                  />
+                </div>
+                <div class="form-group">
+                  <label class="nextTrain" for="nextTrain"
+                    >First Train Time</label
+                  ><label class="milTime"
+                    ><!--add space-->&nbsp;(HH:mm - Military)</label
+                  >
+                  <input
+                    type=""
+                    class="form-control"
+                    id="time"
+                    placeholder="00:00"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="minsAway">Frequency - (mins) </label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="frequency"
+                    placeholder="15"
+                  />
+                </div>
+
+                <button type="submit" class="btn btn-default" id="submit">
+                  Add Train
+                </button>
+
+                <button type="submit" class="btn btn-default" id="removeTain">
+                  Remove
+                </button>
+              </form>
+            </div>
+            <!-- div End -->
+          </div>
+          <!-- div End -->
+        </div>
+        <!-- div End -->
+      </div>
+      <!-- div End -->
+    </div>
+    <!-- entire End -->
+  </body>
+</html>
